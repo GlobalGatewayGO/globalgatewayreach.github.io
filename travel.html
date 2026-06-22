@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel with us — Global Gateway Reach</title>
+<meta name="description" content="Travel in China with locals. Factory tours, business travel, private and group trips — fully custom, planned and guided on the ground by Global Gateway Reach, an Orion Enterprise company.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15202e;
+  --ink-2:#4a5666;
+  --paper:#ffffff;
+  --soft:#eef1f5;
+  --soft-2:#e4e9f0;
+  --line:#dde3eb;
+  --line-2:#c7d0db;
+  --accent:#1652f0;
+  --accent-ink:#0f3fc4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:transparent;
+  color:var(--ink);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:600;line-height:1.12;letter-spacing:-.02em}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+.mark{width:32px;height:32px;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.04}
+.brand-name{font-size:1.12rem;font-weight:700;letter-spacing:-.02em}
+.brand-sub{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-top:3px}
+.navlinks{display:flex;gap:30px;align-items:center;font-size:.92rem;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--ink-2);transition:color .2s}
+.navlinks a:hover{color:var(--ink)}
+.navcta{background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:6px;font-weight:600}
+.navcta:hover{background:var(--accent-ink)}
+.navback{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)!important}
+.navback svg{width:14px;height:14px}
+.lang{display:flex;align-items:center;gap:2px;margin-left:6px;border:1px solid var(--line-2);border-radius:7px;overflow:hidden}
+.lang button{font-family:inherit;font-size:.78rem;font-weight:600;letter-spacing:.03em;padding:7px 11px;border:0;background:transparent;color:var(--ink-2);cursor:pointer;transition:background .2s,color .2s}
+.lang button:hover{color:var(--ink)}
+.lang button.active{background:var(--accent);color:#fff}
+@media(max-width:820px){.lang{margin-left:0}}
+@media(max-width:820px){.navlinks a:not(.navcta):not(.navback){display:none}}
+
+/* page bg */
+.page-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:linear-gradient(180deg,var(--soft) 0%,var(--paper) 30%)}
+.page-bg svg{position:absolute;width:100%;height:100%}
+.route{stroke:#9fb0c4;stroke-width:1.4;fill:none;stroke-dasharray:3 10;opacity:.35;animation:flow 22s linear infinite}
+.route.r2{animation-duration:30s;opacity:.24}
+.route.r3{animation-duration:38s;opacity:.2}
+.route.r4{animation-duration:34s;opacity:.22}
+.route.r5{animation-duration:42s;opacity:.18}
+@keyframes flow{to{stroke-dashoffset:-260}}
+.node{fill:#1652f0;opacity:.4;animation:pulse 4.5s ease-in-out infinite}
+.node.n2{animation-delay:1.4s}
+.node.n3{animation-delay:2.8s}
+.node.n4{animation-delay:.7s}
+.node.n5{animation-delay:3.4s}
+@keyframes pulse{0%,100%{opacity:.14;r:3}50%{opacity:.5;r:5}}
+.drift{animation:drift 30s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-22px,-14px)}}
+@media(prefers-reduced-motion:reduce){.route,.node,.drift{animation:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:108px 0 92px;border-bottom:1px solid var(--line)}
+.hero-inner{max-width:880px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--accent);margin-bottom:26px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,4.6rem);letter-spacing:-.03em}
+.hero .lead{font-size:1.22rem;margin-top:26px;max-width:48ch;color:var(--ink-2)}
+.hero-cta{display:flex;gap:13px;margin-top:38px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.96rem;padding:14px 26px;border-radius:7px;transition:transform .14s,background .2s,border-color .2s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-ink);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* metrics */
+.metrics{display:flex;flex-wrap:wrap;gap:48px;margin-top:64px;padding-top:38px;border-top:1px solid var(--line)}
+.metric b{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;display:block}
+.metric span{font-size:.92rem;color:var(--ink-2)}
+
+/* sections */
+section{padding:96px 0}
+.soft{background:rgba(228,233,240,.55);border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(2px)}
+.sec-head{max-width:60ch;margin-bottom:54px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:clamp(2rem,4vw,2.9rem);letter-spacing:-.025em}
+.sec-head p{margin-top:18px;font-size:1.08rem;color:var(--ink-2)}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:12px;padding:30px 28px;display:flex;flex-direction:column;gap:13px;transition:border-color .2s,transform .15s,box-shadow .2s;backdrop-filter:blur(3px)}
+.card:hover{border-color:var(--line-2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(17,19,21,.06);background:rgba(255,255,255,.92)}
+.card h3{font-size:1.22rem}
+.card p{font-size:.96rem;color:var(--ink-2)}
+@media(max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+/* trip types — 2 col */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.trip{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:14px;padding:36px 34px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .15s,box-shadow .2s;backdrop-filter:blur(3px)}
+.trip:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 12px 34px rgba(22,82,240,.08);background:rgba(255,255,255,.92)}
+.trip .tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.trip h3{font-size:1.4rem;letter-spacing:-.02em}
+.trip p{font-size:.98rem;color:var(--ink-2)}
+.trip ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:8px}
+.trip li{font-size:.92rem;color:var(--ink-2);padding-left:20px;position:relative}
+.trip li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:.7}
+@media(max-width:760px){.grid-2{grid-template-columns:1fr}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{position:relative}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font-weight:700;font-size:.95rem;margin-bottom:18px}
+.step h3{font-size:1.12rem;margin-bottom:7px}
+.step p{font-size:.93rem;color:var(--ink-2)}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:32px 26px}}
+@media(max-width:460px){.steps{grid-template-columns:1fr}}
+
+/* regions */
+.regions{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.region{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:10px;backdrop-filter:blur(3px)}
+.region .city{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.region h3{font-size:1.2rem}
+.region p{font-size:.94rem;color:var(--ink-2)}
+@media(max-width:880px){.regions{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.regions{grid-template-columns:1fr}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.contact h2{font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.025em}
+.contact .lead{margin-top:16px;font-size:1.06rem;color:var(--ink-2);max-width:42ch}
+.contact-actions{display:flex;flex-direction:column;gap:13px}
+.contact-actions a{display:flex;align-items:center;gap:15px;text-decoration:none;background:rgba(255,255,255,.72);border:1px solid var(--line);padding:18px 22px;border-radius:10px;font-weight:500;transition:border-color .2s,transform .14s;backdrop-filter:blur(3px)}
+.contact-actions a:hover{border-color:var(--ink);transform:translateY(-1px)}
+.contact-actions .ico{width:23px;height:23px;flex:0 0 auto}
+.contact-actions small{display:block;color:var(--ink-2);font-weight:400;font-size:.83rem;margin-top:2px}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr;gap:38px}}
+
+/* footer */
+footer{background:#101d30;color:#9fb0c4;padding:56px 0 40px;font-size:.9rem}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:34px}
+.foot-brand{display:flex;align-items:center;gap:11px;color:#fff;font-size:1.08rem;font-weight:700;letter-spacing:-.02em}
+.foot-note{max-width:36ch;color:#6e8099;margin-top:14px;font-size:.85rem}
+.foot-links{display:flex;flex-direction:column;gap:11px}
+.foot-links a{color:#9fb0c4;text-decoration:none}
+.foot-links a:hover{color:#fff}
+.copy{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);color:#5e7088;font-size:.8rem}
+</style>
+</head>
+<body>
+
+<div class="page-bg" aria-hidden="true">
+  <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+    <g class="drift">
+      <path class="route"    d="M-50 120 C 250 80, 450 200, 720 110 S 1100 70, 1280 150"/>
+      <path class="route r2" d="M-50 300 C 200 260, 480 360, 760 250 S 1080 200, 1280 280"/>
+      <path class="route r3" d="M-50 480 C 300 440, 520 560, 820 450 S 1120 410, 1280 490"/>
+      <path class="route r4" d="M-50 660 C 240 620, 470 720, 760 630 S 1090 580, 1280 660"/>
+      <path class="route r5" d="M-50 820 C 280 790, 520 880, 820 800 S 1120 760, 1280 830"/>
+      <circle class="node"    cx="250" cy="92"  r="4"/>
+      <circle class="node n3" cx="720" cy="112" r="4"/>
+      <circle class="node n2" cx="760" cy="252" r="4"/>
+      <circle class="node n4" cx="480" cy="352" r="4"/>
+      <circle class="node n5" cx="820" cy="452" r="4"/>
+      <circle class="node n2" cx="300" cy="464" r="4"/>
+      <circle class="node n4" cx="760" cy="632" r="4"/>
+      <circle class="node n3" cx="240" cy="640" r="4"/>
+      <circle class="node n5" cx="820" cy="802" r="4"/>
+      <circle class="node"    cx="520" cy="868" r="4"/>
+    </g>
+  </svg>
+</div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" stroke="#111315" stroke-width="1.5"/>
+          <path d="M20 5 C12.5 12, 12.5 28, 20 35 C27.5 28, 27.5 12, 20 5 Z" stroke="#111315" stroke-width="1.5" fill="none"/>
+          <path d="M5 20 H35 M8 12.5 H32 M8 27.5 H32" stroke="#111315" stroke-width="1.5"/>
+          <circle cx="20" cy="20" r="2.8" fill="#1652f0"/>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Global Gateway Reach</span>
+          <span class="brand-sub">An Orion Enterprise company</span>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="index.html" class="navback" data-i18n="nav.back">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sourcing
+        </a>
+        <a href="#why" data-i18n="nav.why">Why us</a>
+        <a href="#trips" data-i18n="nav.trips">Trip types</a>
+        <a href="#plan" data-i18n="nav.plan">How we plan</a>
+        <a href="#contact" class="navcta" data-i18n="nav.start">Plan my trip</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="de">DE</button>
+          <button type="button" data-lang="pl">PL</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Travel · Factory tours · Hosting in China</span></span>
+      <h1 data-i18n="hero.h1">See China the way insiders do.</h1>
+      <p class="lead" data-i18n="hero.lead">We host you on the ground — factory tours, business travel with real rest time, private and group trips. Planned and guided in Chinese by people who live here, built around you, not pulled off a shelf.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Plan my trip</a>
+        <a href="#trips" class="btn btn-ghost" data-i18n="hero.cta2">See trip types</a>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><b data-i18n="metric.1t">On the ground</b><span data-i18n="metric.1d">Based in China, fluent in Chinese</span></div>
+      <div class="metric"><b data-i18n="metric.2t">Fully custom</b><span data-i18n="metric.2d">Every trip built around your goals</span></div>
+      <div class="metric"><b data-i18n="metric.3t">End to end</b><span data-i18n="metric.3d">From visa to airport pickup to flight home</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="why.eyebrow">Why travel with us</span></span>
+      <h2 data-i18n="why.h2">A trip in China isn't a package — it's a relationship.</h2>
+      <p data-i18n="why.p">Most travel agencies sell you a route. We start with what you're trying to do in China — meet suppliers, build your name, find products, or simply see the country properly — and design the trip backwards from there.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3 data-i18n="why.1t">Locals, not lookups</h3>
+        <p data-i18n="why.1d">We live here. We don't pull suggestions from a database — we recommend the streets, the factories, and the restaurants we actually know.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="why.2t">Chinese on your side</h3>
+        <p data-i18n="why.2d">Every meeting, taxi, contract, and menu handled by a native Chinese speaker. You don't get filtered through someone's broken English.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="why.3t">Built for your purpose</h3>
+        <p data-i18n="why.3d">Sourcing trip, brand building, leisure, or all three — we design around what you actually need, not a fixed itinerary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIP TYPES -->
+<section id="trips" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="trips.eyebrow">What we offer</span></span>
+      <h2 data-i18n="trips.h2">Six ways to travel with us in China.</h2>
+      <p data-i18n="trips.p">Pick one, combine several, or describe what you want and we'll build it. Every trip is fully customised — these are starting points, not packages.</p>
+    </div>
+    <div class="grid-2">
+      <div class="trip">
+        <span class="tag" data-i18n="trips.1tag">Factory tours</span>
+        <h3 data-i18n="trips.1t">See the factory before you commit.</h3>
+        <p data-i18n="trips.1d">We shortlist factories that fit your product, arrange the visits, brief the suppliers, and accompany you in person. You walk the production line, meet the people running it, and decide who to work with.</p>
+        <ul>
+          <li data-i18n="trips.1l1">Pre-screened suppliers in your product category</li>
+          <li data-i18n="trips.1l2">Full schedule and on-site translation</li>
+          <li data-i18n="trips.1l3">Optional sourcing follow-up after the trip</li>
+        </ul>
+      </div>
+      <div class="trip">
+        <span class="tag" data-i18n="trips.2tag">Business travel</span>
+        <h3 data-i18n="trips.2t">Work, then unwind — properly.</h3>
+        <p data-i18n="trips.2d">Travel for meetings, conferences, or partner visits, with real rest time built in. We arrange the work side and the leisure side, so business in China is not just meetings and hotels.</p>
+        <ul>
+          <li data-i18n="trips.2l1">Meeting coordination and interpreting</li>
+          <li data-i18n="trips.2l2">Curated rest days between work</li>
+          <li data-i18n="trips.2l3">Premium hotels, local transport, dining</li>
+        </ul>
+      </div>
+      <div class="trip">
+        <span class="tag" data-i18n="trips.3tag">Private travel</span>
+        <h3 data-i18n="trips.3t">Your own China itinerary.</h3>
+        <p data-i18n="trips.3d">For individuals, couples, or families. A fully custom route planned around your interests — food, design, history, nature, cities — guided by people who actually live here.</p>
+        <ul>
+          <li data-i18n="trips.3l1">Tailored itineraries, not packages</li>
+          <li data-i18n="trips.3l2">Local guides, drivers, and translators</li>
+          <li data-i18n="trips.3l3">From a weekend to a multi-week journey</li>
+        </ul>
+      </div>
+      <div class="trip">
+        <span class="tag" data-i18n="trips.4tag">Group travel</span>
+        <h3 data-i18n="trips.4t">Companies, friends, and teams.</h3>
+        <p data-i18n="trips.4d">Whether it's a team offsite, a client trip, or friends exploring China together, we handle the logistics of moving a group through the country — and make sure the experience is the same for everyone.</p>
+        <ul>
+          <li data-i18n="trips.4l1">Group transport, lodging, and dining</li>
+          <li data-i18n="trips.4l2">Mixed-purpose itineraries (work + leisure)</li>
+          <li data-i18n="trips.4l3">Optional on-trip translation and support</li>
+        </ul>
+      </div>
+      <div class="trip">
+        <span class="tag" data-i18n="trips.5tag">Personal brand</span>
+        <h3 data-i18n="trips.5t">Grow your name in China.</h3>
+        <p data-i18n="trips.5d">For founders, executives, and creators who want presence in the Chinese market. We arrange introductions, content opportunities, and the right rooms — and help protect your name and reputation on the ground.</p>
+        <ul>
+          <li data-i18n="trips.5l1">Curated meetings and introductions</li>
+          <li data-i18n="trips.5l2">Content production support on location</li>
+          <li data-i18n="trips.5l3">Brand and reputation protection guidance</li>
+        </ul>
+      </div>
+      <div class="trip">
+        <span class="tag" data-i18n="trips.6tag">Fully custom</span>
+        <h3 data-i18n="trips.6t">Tell us what you want.</h3>
+        <p data-i18n="trips.6d">If none of the above fits, describe what you're trying to do and we'll design it. Solo founder visiting suppliers, family on a six-city loop, agency doing a content shoot — we've built trips around all of them.</p>
+        <ul>
+          <li data-i18n="trips.6l1">No fixed structure, no pre-set route</li>
+          <li data-i18n="trips.6l2">Pricing transparent, paid by the trip</li>
+          <li data-i18n="trips.6l3">We start with a free planning conversation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section id="regions">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="regions.eyebrow">Where we host you</span></span>
+      <h2 data-i18n="regions.h2">Anywhere in China — but here's where we travel most.</h2>
+      <p data-i18n="regions.p">We work across the country. These are the regions where we run the most trips because the work and the experience both make sense there.</p>
+    </div>
+    <div class="regions">
+      <div class="region">
+        <span class="city" data-i18n="regions.1c">Guangdong · Shenzhen</span>
+        <h3 data-i18n="regions.1t">Electronics and modern China</h3>
+        <p data-i18n="regions.1d">Factories for electronics, consumer goods, and accessories. Pair the sourcing with a city that runs on speed — design districts, food, and the country's tech edge.</p>
+      </div>
+      <div class="region">
+        <span class="city" data-i18n="regions.2c">Zhejiang · Yiwu</span>
+        <h3 data-i18n="regions.2t">The world's wholesale market</h3>
+        <p data-i18n="regions.2d">If you're sourcing anything from gifts to household goods, this is where it begins. We guide you through the markets and connect you to the factories behind them.</p>
+      </div>
+      <div class="region">
+        <span class="city" data-i18n="regions.3c">Shanghai &amp; the Yangtze</span>
+        <h3 data-i18n="regions.3t">Business, brands, and culture</h3>
+        <p data-i18n="regions.3d">The natural base for premium business travel. Meetings during the week, weekends in Suzhou, Hangzhou, or the water towns — the polished side of working in China.</p>
+      </div>
+      <div class="region">
+        <span class="city" data-i18n="regions.4c">Beijing &amp; the north</span>
+        <h3 data-i18n="regions.4t">Decisions and history</h3>
+        <p data-i18n="regions.4d">When the trip involves government, large enterprises, or the cultural heart of the country. We arrange the meetings and pair them with the parts of China you came to see.</p>
+      </div>
+      <div class="region">
+        <span class="city" data-i18n="regions.5c">Guangxi · Yunnan</span>
+        <h3 data-i18n="regions.5t">Off the standard route</h3>
+        <p data-i18n="regions.5d">For travellers who want China outside the obvious cities — landscapes, minority cultures, food. Slower trips, planned with local guides.</p>
+      </div>
+      <div class="region">
+        <span class="city" data-i18n="regions.6c">Hainan · the south</span>
+        <h3 data-i18n="regions.6t">Where we're based</h3>
+        <p data-i18n="regions.6d">Our home base. Beaches, free-trade zone, slower pace — ideal as the recovery leg after an intensive sourcing or business trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE PLAN -->
+<section id="plan" class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="plan.eyebrow">How we plan</span></span>
+      <h2 data-i18n="plan.h2">From first conversation to flight home.</h2>
+      <p data-i18n="plan.p">Four stages — we do the work, you make the decisions.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3 data-i18n="plan.1t">Tell us your goal</h3><p data-i18n="plan.1d">A short call or message. What you want from the trip, when you can travel, who's coming, and a rough budget.</p></div>
+      <div class="step"><div class="n">2</div><h3 data-i18n="plan.2t">We draft the trip</h3><p data-i18n="plan.2d">Within a few days, you get a clear plan — route, schedule, hotels, transport, costs — with options where it matters.</p></div>
+      <div class="step"><div class="n">3</div><h3 data-i18n="plan.3t">Approve and book</h3><p data-i18n="plan.3d">You approve. We confirm everything on the ground, send you a final itinerary, and prepare any pre-arrival documents.</p></div>
+      <div class="step"><div class="n">4</div><h3 data-i18n="plan.4t">We host you in China</h3><p data-i18n="plan.4d">Airport pickup, translation, transport, factories, hotels, meals — handled. You travel, we make it work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="contact.eyebrow">Plan my trip</span></span>
+      <h2 data-i18n="contact.h2">Tell us what you want to do in China.</h2>
+      <p class="lead" data-i18n="contact.p">A factory tour, a business trip, a custom holiday, a brand-building visit — send a short message with what you're thinking and we'll come back with a draft plan, usually within a couple of business days.</p>
+    </div>
+    <div class="contact-actions">
+      <a href="mailto:hello@globalgatewayreach.com">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#1652f0" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="#1652f0" stroke-width="1.6"/></svg>
+        <span>hello@globalgatewayreach.com<small data-i18n="contact.email">Send us a short brief</small></span>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#1652f0" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#1652f0" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="#1652f0"/></svg>
+        <span>Follow on Instagram<small data-i18n="contact.ig">China travel, on the ground — @globalgatewayreach</small></span>
+      </a>
+      <a href="https://wa.me/" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.6-1.2A9 9 0 1012 3z" stroke="#1652f0" stroke-width="1.6"/><path d="M8.5 8.5c0 4 3 7 7 7 .8 0 1.2-1 .8-1.6l-1.6-1-1.2 1c-1.4-.6-2.4-1.6-3-3l1-1.2-1-1.6c-.6-.4-1.6 0-1.6.8z" fill="#1652f0"/></svg>
+        <span>Message on WhatsApp<small data-i18n="contact.wa">Quick questions welcome</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" width="26" height="26">
+            <circle cx="20" cy="20" r="18.5" stroke="#ffffff" stroke-width="1.5"/>
+            <path d="M20 5 C12.5 12, 12.5 28, 20 35 C27.5 28, 27.5 12, 20 5 Z" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+            <path d="M5 20 H35 M8 12.5 H32 M8 27.5 H32" stroke="#ffffff" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="2.8" fill="#1652f0"/>
+          </svg>
+          Global Gateway Reach
+        </div>
+        <p class="foot-note" data-i18n="foot.note">Travel in China hosted from the ground up — factory tours, business trips, private and group travel, fully built around you.</p>
+      </div>
+      <div class="foot-links">
+        <a href="index.html" data-i18n="foot.sourcing">Sourcing services</a>
+        <a href="#trips" data-i18n="nav.trips">Trip types</a>
+        <a href="#plan" data-i18n="nav.plan">How we plan</a>
+        <a href="#contact" data-i18n="foot.contact">Contact</a>
+      </div>
+    </div>
+    <div class="copy" data-i18n="foot.copy">© 2026 Global Gateway Reach, an Orion Enterprise company. Sourcing · Inspection · Export · Tours · Travel.</div>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en: {
+    "nav.back":"Sourcing","nav.why":"Why us","nav.trips":"Trip types","nav.plan":"How we plan","nav.start":"Plan my trip",
+    "hero.eyebrow":"Travel · Factory tours · Hosting in China",
+    "hero.h1":"See China the way insiders do.",
+    "hero.lead":"We host you on the ground — factory tours, business travel with real rest time, private and group trips. Planned and guided in Chinese by people who live here, built around you, not pulled off a shelf.",
+    "hero.cta1":"Plan my trip","hero.cta2":"See trip types",
+    "metric.1t":"On the ground","metric.1d":"Based in China, fluent in Chinese",
+    "metric.2t":"Fully custom","metric.2d":"Every trip built around your goals",
+    "metric.3t":"End to end","metric.3d":"From visa to airport pickup to flight home",
+    "why.eyebrow":"Why travel with us",
+    "why.h2":"A trip in China isn't a package — it's a relationship.",
+    "why.p":"Most travel agencies sell you a route. We start with what you're trying to do in China — meet suppliers, build your name, find products, or simply see the country properly — and design the trip backwards from there.",
+    "why.1t":"Locals, not lookups","why.1d":"We live here. We don't pull suggestions from a database — we recommend the streets, the factories, and the restaurants we actually know.",
+    "why.2t":"Chinese on your side","why.2d":"Every meeting, taxi, contract, and menu handled by a native Chinese speaker. You don't get filtered through someone's broken English.",
+    "why.3t":"Built for your purpose","why.3d":"Sourcing trip, brand building, leisure, or all three — we design around what you actually need, not a fixed itinerary.",
+    "trips.eyebrow":"What we offer","trips.h2":"Six ways to travel with us in China.",
+    "trips.p":"Pick one, combine several, or describe what you want and we'll build it. Every trip is fully customised — these are starting points, not packages.",
+    "trips.1tag":"Factory tours","trips.1t":"See the factory before you commit.","trips.1d":"We shortlist factories that fit your product, arrange the visits, brief the suppliers, and accompany you in person. You walk the production line, meet the people running it, and decide who to work with.",
+    "trips.1l1":"Pre-screened suppliers in your product category","trips.1l2":"Full schedule and on-site translation","trips.1l3":"Optional sourcing follow-up after the trip",
+    "trips.2tag":"Business travel","trips.2t":"Work, then unwind — properly.","trips.2d":"Travel for meetings, conferences, or partner visits, with real rest time built in. We arrange the work side and the leisure side, so business in China is not just meetings and hotels.",
+    "trips.2l1":"Meeting coordination and interpreting","trips.2l2":"Curated rest days between work","trips.2l3":"Premium hotels, local transport, dining",
+    "trips.3tag":"Private travel","trips.3t":"Your own China itinerary.","trips.3d":"For individuals, couples, or families. A fully custom route planned around your interests — food, design, history, nature, cities — guided by people who actually live here.",
+    "trips.3l1":"Tailored itineraries, not packages","trips.3l2":"Local guides, drivers, and translators","trips.3l3":"From a weekend to a multi-week journey",
+    "trips.4tag":"Group travel","trips.4t":"Companies, friends, and teams.","trips.4d":"Whether it's a team offsite, a client trip, or friends exploring China together, we handle the logistics of moving a group through the country — and make sure the experience is the same for everyone.",
+    "trips.4l1":"Group transport, lodging, and dining","trips.4l2":"Mixed-purpose itineraries (work + leisure)","trips.4l3":"Optional on-trip translation and support",
+    "trips.5tag":"Personal brand","trips.5t":"Grow your name in China.","trips.5d":"For founders, executives, and creators who want presence in the Chinese market. We arrange introductions, content opportunities, and the right rooms — and help protect your name and reputation on the ground.",
+    "trips.5l1":"Curated meetings and introductions","trips.5l2":"Content production support on location","trips.5l3":"Brand and reputation protection guidance",
+    "trips.6tag":"Fully custom","trips.6t":"Tell us what you want.","trips.6d":"If none of the above fits, describe what you're trying to do and we'll design it. Solo founder visiting suppliers, family on a six-city loop, agency doing a content shoot — we've built trips around all of them.",
+    "trips.6l1":"No fixed structure, no pre-set route","trips.6l2":"Pricing transparent, paid by the trip","trips.6l3":"We start with a free planning conversation",
+    "regions.eyebrow":"Where we host you",
+    "regions.h2":"Anywhere in China — but here's where we travel most.",
+    "regions.p":"We work across the country. These are the regions where we run the most trips because the work and the experience both make sense there.",
+    "regions.1c":"Guangdong · Shenzhen","regions.1t":"Electronics and modern China","regions.1d":"Factories for electronics, consumer goods, and accessories. Pair the sourcing with a city that runs on speed — design districts, food, and the country's tech edge.",
+    "regions.2c":"Zhejiang · Yiwu","regions.2t":"The world's wholesale market","regions.2d":"If you're sourcing anything from gifts to household goods, this is where it begins. We guide you through the markets and connect you to the factories behind them.",
+    "regions.3c":"Shanghai & the Yangtze","regions.3t":"Business, brands, and culture","regions.3d":"The natural base for premium business travel. Meetings during the week, weekends in Suzhou, Hangzhou, or the water towns — the polished side of working in China.",
+    "regions.4c":"Beijing & the north","regions.4t":"Decisions and history","regions.4d":"When the trip involves government, large enterprises, or the cultural heart of the country. We arrange the meetings and pair them with the parts of China you came to see.",
+    "regions.5c":"Guangxi · Yunnan","regions.5t":"Off the standard route","regions.5d":"For travellers who want China outside the obvious cities — landscapes, minority cultures, food. Slower trips, planned with local guides.",
+    "regions.6c":"Hainan · the south","regions.6t":"Where we're based","regions.6d":"Our home base. Beaches, free-trade zone, slower pace — ideal as the recovery leg after an intensive sourcing or business trip.",
+    "plan.eyebrow":"How we plan","plan.h2":"From first conversation to flight home.","plan.p":"Four stages — we do the work, you make the decisions.",
+    "plan.1t":"Tell us your goal","plan.1d":"A short call or message. What you want from the trip, when you can travel, who's coming, and a rough budget.",
+    "plan.2t":"We draft the trip","plan.2d":"Within a few days, you get a clear plan — route, schedule, hotels, transport, costs — with options where it matters.",
+    "plan.3t":"Approve and book","plan.3d":"You approve. We confirm everything on the ground, send you a final itinerary, and prepare any pre-arrival documents.",
+    "plan.4t":"We host you in China","plan.4d":"Airport pickup, translation, transport, factories, hotels, meals — handled. You travel, we make it work.",
+    "contact.eyebrow":"Plan my trip","contact.h2":"Tell us what you want to do in China.",
+    "contact.p":"A factory tour, a business trip, a custom holiday, a brand-building visit — send a short message with what you're thinking and we'll come back with a draft plan, usually within a couple of business days.",
+    "contact.email":"Send us a short brief","contact.ig":"China travel, on the ground — @globalgatewayreach","contact.wa":"Quick questions welcome",
+    "foot.note":"Travel in China hosted from the ground up — factory tours, business trips, private and group travel, fully built around you.",
+    "foot.sourcing":"Sourcing services","foot.contact":"Contact",
+    "foot.copy":"© 2026 Global Gateway Reach, an Orion Enterprise company. Sourcing · Inspection · Export · Tours · Travel."
+  },
+  de: {
+    "nav.back":"Beschaffung","nav.why":"Warum wir","nav.trips":"Reisearten","nav.plan":"Planungsprozess","nav.start":"Reise planen",
+    "hero.eyebrow":"Reisen · Fabrikbesuche · Empfang in China",
+    "hero.h1":"Erleben Sie China wie ein Insider.",
+    "hero.lead":"Wir empfangen Sie vor Ort – Fabrikbesuche, Geschäftsreisen mit echter Erholungszeit, Privat- und Gruppenreisen. Geplant und auf Chinesisch begleitet von Menschen, die hier leben – ganz auf Sie zugeschnitten.",
+    "hero.cta1":"Reise planen","hero.cta2":"Reisearten ansehen",
+    "metric.1t":"Vor Ort","metric.1d":"In China ansässig, Chinesisch fließend",
+    "metric.2t":"Ganz individuell","metric.2d":"Jede Reise wird um Ihre Ziele gebaut",
+    "metric.3t":"Komplettbetreuung","metric.3d":"Vom Visum bis zur Abholung und Rückreise",
+    "why.eyebrow":"Warum mit uns reisen",
+    "why.h2":"Eine Reise in China ist kein Paket – es ist eine Beziehung.",
+    "why.p":"Die meisten Reisebüros verkaufen Ihnen eine Route. Wir beginnen mit Ihrem Ziel in China – Lieferanten treffen, Ihren Namen aufbauen, Produkte finden oder das Land richtig sehen – und gestalten die Reise von dort aus rückwärts.",
+    "why.1t":"Einheimische, keine Datenbank","why.1d":"Wir leben hier. Wir empfehlen die Straßen, Fabriken und Restaurants, die wir wirklich kennen – nicht das, was Google vorschlägt.",
+    "why.2t":"Chinesisch an Ihrer Seite","why.2d":"Jedes Meeting, Taxi, jeder Vertrag und jede Speisekarte wird von einem chinesischen Muttersprachler übernommen. Nichts geht durch holpriges Englisch verloren.",
+    "why.3t":"Für Ihren Zweck gebaut","why.3d":"Sourcing-Reise, Markenaufbau, Urlaub oder alles auf einmal – wir gestalten alles um Ihre echten Bedürfnisse.",
+    "trips.eyebrow":"Was wir anbieten","trips.h2":"Sechs Arten, mit uns in China zu reisen.",
+    "trips.p":"Wählen Sie eine, kombinieren Sie mehrere, oder sagen Sie uns, was Sie wollen – wir bauen es. Jede Reise wird komplett individuell gestaltet – das sind Ausgangspunkte, keine Pakete.",
+    "trips.1tag":"Fabrikbesuche","trips.1t":"Sehen Sie die Fabrik, bevor Sie sich festlegen.","trips.1d":"Wir wählen passende Fabriken aus, organisieren die Besuche, briefen die Lieferanten und begleiten Sie persönlich. Sie laufen durch die Produktionslinie, treffen die Verantwortlichen und entscheiden, mit wem Sie arbeiten.",
+    "trips.1l1":"Vorab geprüfte Lieferanten in Ihrer Produktkategorie","trips.1l2":"Komplette Planung und Vor-Ort-Übersetzung","trips.1l3":"Optional: Sourcing-Begleitung nach der Reise",
+    "trips.2tag":"Geschäftsreisen","trips.2t":"Arbeiten, dann richtig abschalten.","trips.2d":"Reisen für Meetings, Konferenzen oder Partnerbesuche – mit echter Erholungszeit. Wir kümmern uns um Arbeit und Freizeit, damit Geschäft in China mehr ist als Meetings und Hotels.",
+    "trips.2l1":"Koordination und Dolmetschen bei Terminen","trips.2l2":"Ausgewählte Ruhetage zwischen den Meetings","trips.2l3":"Premium-Hotels, Transport vor Ort, gutes Essen",
+    "trips.3tag":"Privatreisen","trips.3t":"Ihre eigene China-Route.","trips.3d":"Für Einzelne, Paare oder Familien. Eine komplett individuelle Route nach Ihren Interessen – Essen, Design, Geschichte, Natur, Städte – begleitet von Menschen, die hier wirklich leben.",
+    "trips.3l1":"Maßgeschneiderte Reisepläne, keine Pakete","trips.3l2":"Lokale Guides, Fahrer und Übersetzer","trips.3l3":"Vom Wochenende bis zur mehrwöchigen Reise",
+    "trips.4tag":"Gruppenreisen","trips.4t":"Unternehmen, Freunde, Teams.","trips.4d":"Ob Team-Offsite, Kundenreise oder Freunde, die gemeinsam China erkunden – wir kümmern uns um die Logistik, eine Gruppe durchs Land zu bewegen, und sorgen dafür, dass alle das gleiche Erlebnis haben.",
+    "trips.4l1":"Gruppentransport, Unterkunft und Verpflegung","trips.4l2":"Gemischte Reiseinhalte (Arbeit und Freizeit)","trips.4l3":"Optional: Übersetzung und Begleitung unterwegs",
+    "trips.5tag":"Persönliche Marke","trips.5t":"Bauen Sie Ihren Namen in China auf.","trips.5d":"Für Gründer, Führungskräfte und Kreative, die Präsenz im chinesischen Markt aufbauen wollen. Wir organisieren Vorstellungen, Content-Möglichkeiten und die richtigen Räume – und schützen Ihren Namen vor Ort.",
+    "trips.5l1":"Kuratierte Meetings und Vorstellungen","trips.5l2":"Content-Unterstützung vor Ort","trips.5l3":"Schutz von Marke und Reputation",
+    "trips.6tag":"Ganz individuell","trips.6t":"Sagen Sie, was Sie wollen.","trips.6d":"Wenn nichts davon passt, beschreiben Sie es – wir entwerfen es. Solo-Gründer bei Lieferanten, Familie auf einer Sechs-Städte-Tour, Agentur beim Dreh – wir haben Reisen für alle gebaut.",
+    "trips.6l1":"Keine feste Struktur, keine vorgegebene Route","trips.6l2":"Transparente Preise, pro Reise","trips.6l3":"Wir starten mit einem kostenlosen Planungsgespräch",
+    "regions.eyebrow":"Wo wir Sie empfangen",
+    "regions.h2":"Überall in China – aber hier reisen wir am häufigsten.",
+    "regions.p":"Wir arbeiten im ganzen Land. Dies sind die Regionen, in denen wir die meisten Reisen organisieren, weil Arbeit und Erlebnis dort beides Sinn ergeben.",
+    "regions.1c":"Guangdong · Shenzhen","regions.1t":"Elektronik und das moderne China","regions.1d":"Fabriken für Elektronik, Konsumgüter und Accessoires. Kombinieren Sie Sourcing mit einer Stadt, die auf Tempo läuft – Designviertel, Essen und Chinas technologische Spitze.",
+    "regions.2c":"Zhejiang · Yiwu","regions.2t":"Der Großhandelsmarkt der Welt","regions.2d":"Ob Geschenke oder Haushaltswaren – hier beginnt fast alles. Wir führen Sie durch die Märkte und verbinden Sie mit den Fabriken dahinter.",
+    "regions.3c":"Shanghai & der Jangtse","regions.3t":"Business, Marken und Kultur","regions.3d":"Die natürliche Basis für gehobene Geschäftsreisen. Unter der Woche Meetings, am Wochenende Suzhou, Hangzhou oder die Wasserstädte – die elegante Seite Chinas.",
+    "regions.4c":"Peking & der Norden","regions.4t":"Entscheidungen und Geschichte","regions.4d":"Wenn die Reise Regierung, Großunternehmen oder das kulturelle Herz Chinas berührt. Wir organisieren die Termine und kombinieren sie mit dem China, das Sie sehen wollten.",
+    "regions.5c":"Guangxi · Yunnan","regions.5t":"Abseits der Standardroute","regions.5d":"Für Reisende, die China jenseits der bekannten Städte wollen – Landschaften, Minderheitenkulturen, Essen. Langsamere Reisen, mit lokalen Guides geplant.",
+    "regions.6c":"Hainan · der Süden","regions.6t":"Unsere Basis","regions.6d":"Unser Heimatstandort. Strände, Freihandelszone, ruhigeres Tempo – ideal als Erholungsetappe nach einer intensiven Sourcing- oder Geschäftsreise.",
+    "plan.eyebrow":"So planen wir","plan.h2":"Vom ersten Gespräch bis zum Rückflug.","plan.p":"Vier Stufen – wir machen die Arbeit, Sie treffen die Entscheidungen.",
+    "plan.1t":"Sagen Sie uns Ihr Ziel","plan.1d":"Ein kurzer Anruf oder eine Nachricht. Was Sie sich von der Reise wünschen, wann Sie können, wer mitkommt und ein grobes Budget.",
+    "plan.2t":"Wir entwerfen die Reise","plan.2d":"Innerhalb weniger Tage bekommen Sie einen klaren Plan – Route, Ablauf, Hotels, Transport, Kosten – mit Optionen, wo es zählt.",
+    "plan.3t":"Freigeben und buchen","plan.3d":"Sie geben frei. Wir bestätigen alles vor Ort, senden Ihnen ein finales Programm und bereiten alle Unterlagen vor.",
+    "plan.4t":"Wir empfangen Sie in China","plan.4d":"Flughafenabholung, Übersetzung, Transport, Fabriken, Hotels, Essen – erledigt. Sie reisen, wir kümmern uns.",
+    "contact.eyebrow":"Reise planen","contact.h2":"Sagen Sie uns, was Sie in China vorhaben.",
+    "contact.p":"Ein Fabrikbesuch, eine Geschäftsreise, ein individueller Urlaub oder ein Markenaufbau-Besuch – schreiben Sie kurz, was Sie sich vorstellen, und wir melden uns mit einem Entwurf, meist innerhalb weniger Werktage.",
+    "contact.email":"Schreiben Sie uns kurz","contact.ig":"China-Reisen vor Ort — @globalgatewayreach","contact.wa":"Kurze Fragen willkommen",
+    "foot.note":"Reisen in China, vor Ort begleitet – Fabrikbesuche, Geschäftsreisen, Privat- und Gruppenreisen, ganz auf Sie zugeschnitten.",
+    "foot.sourcing":"Beschaffungsdienste","foot.contact":"Kontakt",
+    "foot.copy":"© 2026 Global Gateway Reach, ein Unternehmen von Orion Enterprise. Beschaffung · Prüfung · Export · Touren · Reisen."
+  },
+  pl: {
+    "nav.back":"Sourcing","nav.why":"Dlaczego my","nav.trips":"Rodzaje podróży","nav.plan":"Jak planujemy","nav.start":"Zaplanuj podróż",
+    "hero.eyebrow":"Podróże · Wizyty w fabrykach · Goszczenie w Chinach",
+    "hero.h1":"Zobacz Chiny tak, jak widzą je insiderzy.",
+    "hero.lead":"Goszczimy Cię na miejscu – wizyty w fabrykach, podróże biznesowe z prawdziwym czasem na odpoczynek, wyjazdy prywatne i grupowe. Planowane i prowadzone po chińsku przez ludzi, którzy tu mieszkają – w pełni dopasowane do Ciebie.",
+    "hero.cta1":"Zaplanuj podróż","hero.cta2":"Zobacz rodzaje podróży",
+    "metric.1t":"Na miejscu","metric.1d":"Z siedzibą w Chinach, biegły chiński",
+    "metric.2t":"W pełni na miarę","metric.2d":"Każda podróż budowana wokół Twoich celów",
+    "metric.3t":"Kompleksowo","metric.3d":"Od wizy po odbiór z lotniska i powrót",
+    "why.eyebrow":"Dlaczego z nami",
+    "why.h2":"Podróż w Chinach to nie pakiet – to relacja.",
+    "why.p":"Większość biur podróży sprzedaje Ci trasę. My zaczynamy od tego, co chcesz zrobić w Chinach – spotkać dostawców, zbudować swoją markę, znaleźć produkty albo po prostu naprawdę zobaczyć kraj – i projektujemy podróż wstecz od tego celu.",
+    "why.1t":"Lokalni, nie wyszukiwarka","why.1d":"Mieszkamy tu. Nie wyciągamy sugestii z bazy danych – polecamy ulice, fabryki i restauracje, które naprawdę znamy.",
+    "why.2t":"Chiński po Twojej stronie","why.2d":"Każde spotkanie, taksówka, umowa i menu obsługiwane przez native speakera. Nic nie ginie przez czyjąś łamaną angielszczyznę.",
+    "why.3t":"Zbudowane pod Twój cel","why.3d":"Wyjazd sourcingowy, budowanie marki, wypoczynek lub wszystko naraz – projektujemy wokół tego, czego naprawdę potrzebujesz.",
+    "trips.eyebrow":"Co oferujemy","trips.h2":"Sześć sposobów, by podróżować z nami po Chinach.",
+    "trips.p":"Wybierz jeden, połącz kilka, lub opisz, czego chcesz – zbudujemy to. Każda podróż jest w pełni indywidualna – to punkty wyjścia, nie pakiety.",
+    "trips.1tag":"Wizyty w fabrykach","trips.1t":"Zobacz fabrykę zanim się zdecydujesz.","trips.1d":"Wybieramy fabryki pasujące do Twojego produktu, organizujemy wizyty, instruujemy dostawców i osobiście Ci towarzyszymy. Przechodzisz przez linię produkcyjną, poznajesz ludzi, którzy nią zarządzają, i decydujesz, z kim współpracować.",
+    "trips.1l1":"Wstępnie zweryfikowani dostawcy w Twojej kategorii","trips.1l2":"Pełny harmonogram i tłumaczenie na miejscu","trips.1l3":"Opcjonalne kontynuowanie sourcingu po wyjeździe",
+    "trips.2tag":"Podróże biznesowe","trips.2t":"Pracuj, a potem naprawdę odpocznij.","trips.2d":"Wyjazdy na spotkania, konferencje lub wizyty u partnerów, z wbudowanym prawdziwym czasem na odpoczynek. Zajmujemy się stroną pracy i odpoczynku, by biznes w Chinach to nie były tylko spotkania i hotele.",
+    "trips.2l1":"Koordynacja spotkań i tłumaczenia","trips.2l2":"Wybrane dni odpoczynku między pracą","trips.2l3":"Premium hotele, transport lokalny, jedzenie",
+    "trips.3tag":"Podróże prywatne","trips.3t":"Twoja własna trasa po Chinach.","trips.3d":"Dla osób, par lub rodzin. W pełni indywidualna trasa planowana wokół Twoich zainteresowań – jedzenie, design, historia, natura, miasta – prowadzona przez ludzi, którzy naprawdę tu mieszkają.",
+    "trips.3l1":"Trasy szyte na miarę, nie pakiety","trips.3l2":"Lokalni przewodnicy, kierowcy i tłumacze","trips.3l3":"Od weekendu po kilkutygodniową podróż",
+    "trips.4tag":"Podróże grupowe","trips.4t":"Firmy, znajomi i zespoły.","trips.4d":"Czy to wyjazd integracyjny zespołu, podróż z klientem czy znajomi razem zwiedzający Chiny – zajmujemy się logistyką przemieszczania grupy przez kraj i dbamy, by każdy miał te same wrażenia.",
+    "trips.4l1":"Transport grupowy, zakwaterowanie, posiłki","trips.4l2":"Trasy mieszane (praca i wypoczynek)","trips.4l3":"Opcjonalne tłumaczenia i wsparcie w trakcie",
+    "trips.5tag":"Marka osobista","trips.5t":"Rozwijaj swoje imię w Chinach.","trips.5d":"Dla założycieli, dyrektorów i twórców, którzy chcą być obecni na chińskim rynku. Organizujemy przedstawienia, możliwości tworzenia treści i właściwe pokoje – oraz pomagamy chronić Twoje nazwisko na miejscu.",
+    "trips.5l1":"Wybrane spotkania i przedstawienia","trips.5l2":"Wsparcie produkcji treści na miejscu","trips.5l3":"Ochrona marki i reputacji",
+    "trips.6tag":"W pełni indywidualnie","trips.6t":"Powiedz, czego chcesz.","trips.6d":"Jeśli nic powyższego nie pasuje, opisz, co chcesz zrobić – zaprojektujemy to. Samotny założyciel u dostawców, rodzina na trasie przez sześć miast, agencja na zdjęciach – budowaliśmy podróże dla nich wszystkich.",
+    "trips.6l1":"Bez sztywnej struktury, bez gotowej trasy","trips.6l2":"Przejrzyste ceny, rozliczane od podróży","trips.6l3":"Zaczynamy od bezpłatnej rozmowy planującej",
+    "regions.eyebrow":"Gdzie Cię goszczimy",
+    "regions.h2":"W całych Chinach – ale tu jeździmy najczęściej.",
+    "regions.p":"Pracujemy w całym kraju. To regiony, w których organizujemy najwięcej podróży, bo praca i doświadczenie mają tam sens.",
+    "regions.1c":"Guangdong · Shenzhen","regions.1t":"Elektronika i nowoczesne Chiny","regions.1d":"Fabryki elektroniki, dóbr konsumpcyjnych i akcesoriów. Połącz sourcing z miastem, które żyje tempem – dzielnice projektowe, jedzenie i technologiczna czołówka kraju.",
+    "regions.2c":"Zhejiang · Yiwu","regions.2t":"Światowy rynek hurtowy","regions.2d":"Czy szukasz prezentów, czy artykułów gospodarstwa domowego – tu zaczyna się prawie wszystko. Prowadzimy Cię przez hale i łączymy z fabrykami za nimi.",
+    "regions.3c":"Szanghaj i Jangcy","regions.3t":"Biznes, marki i kultura","regions.3d":"Naturalna baza dla podróży biznesowych z wyższej półki. W tygodniu spotkania, w weekend Suzhou, Hangzhou lub miasta nad wodą – elegancka strona pracy w Chinach.",
+    "regions.4c":"Pekin i północ","regions.4t":"Decyzje i historia","regions.4d":"Gdy podróż obejmuje rząd, duże przedsiębiorstwa lub kulturowe serce kraju. Organizujemy spotkania i łączymy je z tymi Chinami, które chciałeś zobaczyć.",
+    "regions.5c":"Guangxi · Yunnan","regions.5t":"Poza standardową trasą","regions.5d":"Dla podróżników szukających Chin poza oczywistymi miastami – krajobrazy, kultury mniejszości, jedzenie. Wolniejsze podróże, planowane z lokalnymi przewodnikami.",
+    "regions.6c":"Hainan · południe","regions.6t":"Gdzie mamy bazę","regions.6d":"Nasza baza domowa. Plaże, strefa wolnego handlu, wolniejsze tempo – idealny etap regeneracyjny po intensywnym wyjeździe sourcingowym lub biznesowym.",
+    "plan.eyebrow":"Jak planujemy","plan.h2":"Od pierwszej rozmowy po lot powrotny.","plan.p":"Cztery etapy – my robimy robotę, Ty podejmujesz decyzje.",
+    "plan.1t":"Powiedz nam cel","plan.1d":"Krótka rozmowa lub wiadomość. Czego chcesz od wyjazdu, kiedy możesz, kto jedzie i orientacyjny budżet.",
+    "plan.2t":"Projektujemy podróż","plan.2d":"W ciągu kilku dni dostajesz jasny plan – trasę, harmonogram, hotele, transport, koszty – z opcjami tam, gdzie to ma znaczenie.",
+    "plan.3t":"Zatwierdzasz i bukujemy","plan.3d":"Zatwierdzasz. Potwierdzamy wszystko na miejscu, wysyłamy finalny program i przygotowujemy dokumenty na przyjazd.",
+    "plan.4t":"Goszczimy Cię w Chinach","plan.4d":"Odbiór z lotniska, tłumaczenia, transport, fabryki, hotele, posiłki – załatwione. Ty podróżujesz, my dbamy, by działało.",
+    "contact.eyebrow":"Zaplanuj podróż","contact.h2":"Powiedz nam, co chcesz zrobić w Chinach.",
+    "contact.p":"Wizyta w fabryce, podróż biznesowa, indywidualne wakacje czy wyjazd budujący markę – napisz krótko, co masz na myśli, a wrócimy ze szkicem planu, zwykle w ciągu kilku dni roboczych.",
+    "contact.email":"Wyślij nam krótki brief","contact.ig":"Podróże po Chinach od środka — @globalgatewayreach","contact.wa":"Krótkie pytania mile widziane",
+    "foot.note":"Podróże po Chinach prowadzone od podstaw – wizyty w fabrykach, podróże biznesowe, prywatne i grupowe, w pełni dopasowane do Ciebie.",
+    "foot.sourcing":"Usługi sourcingowe","foot.contact":"Kontakt",
+    "foot.copy":"© 2026 Global Gateway Reach, firma Orion Enterprise. Sourcing · Kontrola · Eksport · Wycieczki · Podróże."
+  }
+};
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(dict[k] !== undefined) el.textContent = dict[k];
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang button').forEach(b=>{
+    b.classList.toggle('active', b.getAttribute('data-lang')===lang);
+  });
+}
+document.querySelectorAll('.lang button').forEach(b=>{
+  b.addEventListener('click',()=>setLang(b.getAttribute('data-lang')));
+});
+</script>
+</body>
+</html>
